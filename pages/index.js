@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Layout from "@/components/Layout"
 import { motion } from "framer-motion"
 import React from "react"
@@ -5,7 +6,6 @@ import Typical from "react-typical"
 
 import GithubIcon from "@/components/icons/Github.js";
 import LinkedinIcon from "@/components/icons/Linkedin.js";
-
 
 const TypingAnimation = React.memo(
   () => {
@@ -64,23 +64,68 @@ export default function Home() {
             {/* Social Accounts */}
             <div className="flex items-center mt-8 space-x-6 md:mt-4">
               <motion.a href="https://github.com/gokcesanmutlu" target={"blank"} rel="noopener noreferrer"
-              className="flex items center justify-center text-gray-800 transition-colors duration-300
+                className="flex items center justify-center text-gray-800 transition-colors duration-300
               dark:text-gray-100 dark:hover:text-pinkish-200 hover:text-pinkish-200"
-              whileHover={{scale:1.1}}>
-                <GithubIcon className={"w-8 h-8 fill-current"}/>
+                whileHover={{ scale: 1.1 }}>
+                <GithubIcon className={"w-8 h-8 fill-current"} />
               </motion.a>
               <motion.a href="https://www.linkedin.com/in/gokcesan/" target={"blank"} rel="noopener noreferrer"
-              className="flex items center justify-center text-gray-800 transition-colors duration-300
+                className="flex items center justify-center text-gray-800 transition-colors duration-300
               dark:text-gray-100 dark:hover:text-pinkish-200 hover:text-pinkish-200"
-              whileHover={{scale:1.1}}>
-                <LinkedinIcon className={"w-8 h-8 fill-current"}/>
+                whileHover={{ scale: 1.1 }}>
+                <LinkedinIcon className={"w-8 h-8 fill-current"} />
               </motion.a>
             </div>
           </div>
+
+          {/* Code Part */}
+          <article className="mt-3 prose md:mt-4 md:prose-lg dark:prose-dark ">
+            <div>
+              <pre>
+                <code className="language-js">
+                  <div className="flex items-center py-0 my-0 space-x-4 text-gray-500">
+                    <span>// Portfolio.js </span>
+                  </div>
+                  <p>
+                    <span className="text-gray-500">//</span>{" "}
+                    <span className="text-purple-300">Todo:</span> You can drag
+                    these balloons I'm really in love with them 🎈🎈
+                  </p>
+
+                  <div className="flex items-center space-x-4">
+                    <img
+                      src="https://media.licdn.com/dms/image/D4D03AQELL-D84jo8uA/profile-displayphoto-shrink_200_200/0/1693418649331?e=1706140800&v=beta&t=ue0CTP2WlU4KuudMOMVI-t-zj231Q8yS2q-CUtvAKtk"
+                      alt="Me"
+                      className="w-10 h-10 rounded-full"
+                    />
+
+                    <div className="">
+                      <p className="text-sm">
+                        <span className="text-pink-300"> {">"} </span> const
+                        techWeb
+                        <span className="font-bold text-pink-300">2</span> =
+                        ["Javascript", "Tailwind", "Reactjs"];{" "}
+                      </p>
+                      <p className="text-sm">
+                        <span className="text-pink-300"> {">"} </span> const
+                        techWeb
+                        <span className="font-bold text-pink-300">3</span> =
+                        ["Solidity", "Web3.js"];{" "}
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center space-x-8">
+                    <Link href="/projects">
+                      <span className="transition duration-300">Projects</span>
+                    </Link>
+                  </div>
+                </code>
+              </pre>
+            </div>
+          </article>
         </section>
       </main>
     </Layout>
-
-
   )
 }

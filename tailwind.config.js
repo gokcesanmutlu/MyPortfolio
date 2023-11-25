@@ -49,11 +49,10 @@ module.exports = {
         dark: {
           css: {
             color: theme("colors.gray.100"),
-
             a: {
-              color: theme("colors.purple.400"),
+              color: theme("colors.purple.600"),
               "&:hover": {
-                color: theme("colors.purple.300"),
+                color: theme("colors.purple.600"),
               },
             },
           },
@@ -61,12 +60,10 @@ module.exports = {
       }),
     },
   },
-  varients: {
+  variants: {
     extend: {
-      typography: ["dark"]
+      typography: ["dark"],
     },
   },
-  plugins: [
-    require("@tailwindcss/typography")
-  ],
+  plugins: [require("@tailwindcss/typography")],
 }
