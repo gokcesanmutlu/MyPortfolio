@@ -6,6 +6,7 @@ import Typical from "react-typical"
 
 import GithubIcon from "@/components/icons/Github.js";
 import LinkedinIcon from "@/components/icons/Linkedin.js";
+import { getAllProjects } from "@/functions/getAllProjects";
 
 const TypingAnimation = React.memo(
   () => {
